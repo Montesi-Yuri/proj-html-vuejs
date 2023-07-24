@@ -54,6 +54,34 @@ export const store = reactive({
                     text: 'When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.'
                 }
             ]
-        }
+        },
+        portfolio:[
+            {
+                image:'../assets/img/DRY-1-790x576.jpg',
+                title: 'Purinky Products',
+                subtitle: 'Digital Experience'
+            },
+            {
+                image:'../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+                title: 'Satisfy Poster',
+                subtitle: 'Branding Strategy'
+            },
+            {
+                image:'../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+                title: 'Satisfy Poster',
+                subtitle: 'Branding Strategy'
+            },
+            {
+                image:'../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+                title: 'Satisfy Poster',
+                subtitle: 'Branding Strategy'
+            },
+            {
+                image:'../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
+                title: 'Satisfy Poster',
+                subtitle: 'Branding Strategy'
+            },
+
+        ]
     }
 });
