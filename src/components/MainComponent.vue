@@ -116,7 +116,269 @@ export default {
 			</div>
 		</section>
 
-		
+		<!-- Price List -->
+		<section class="price-list">
+			<div class="container">
+				<h5>
+					small title
+				</h5>
+				<h3>
+					section title
+				</h3>
+				<h6>
+					subtitle
+				</h6>
+				<div class="cards-container">
+					<div class="card">
+						<h4>
+							card title
+						</h4>
+						<h5>
+							card subtitle
+						</h5>
+						<div class="price">
+							<p>$</p>
+							<span class=" text-4xl">
+								40
+							</span>
+							<p>
+								Per Month
+							</p>
+						</div>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<button>
+							purple button
+						</button>
+					</div>
+
+					<div class="card">
+						<h4>
+							card title
+						</h4>
+						<h5>
+							card subtitle
+						</h5>
+						<div class="price">
+							<p>$</p>
+							<span class=" text-4xl">
+								40
+							</span>
+							<p>
+								Per Month
+							</p>
+						</div>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<button>
+							purple button
+						</button>
+					</div>
+
+					<div class="card">
+						<h4>
+							card title
+						</h4>
+						<h5>
+							card subtitle
+						</h5>
+						<div class="price">
+							<p>$</p>
+							<span class=" text-4xl">
+								40
+							</span>
+							<p>
+								Per Month
+							</p>
+						</div>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<p>text 
+							<span>
+								span text
+							</span>
+						</p>
+						<button>
+							purple button
+						</button>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- Blog -->
+		<section class="blog">
+			<div class="container">
+				<h5>
+					small title
+				</h5>
+				<h3>
+					section title
+				</h3>
+				<h6>
+					subtitle
+				</h6>
+				<div class="cards-container">
+					<div class="card w-1/3">
+						<span>
+							text
+						</span>
+						<h5>
+							card title
+						</h5>
+						<p>
+							card text
+						</p>
+						<button>
+							blue button
+						</button>
+					</div>
+					<div class="card w-1/6">
+						<span>
+							text
+						</span>
+						<h5>
+							card title
+						</h5>
+						<p>
+							card text
+						</p>
+						<button>
+							blue button
+						</button>
+					</div>
+					<div class="card w-1/6">
+						<span>
+							text
+						</span>
+						<h5>
+							card title
+						</h5>
+						<p>
+							card text
+						</p>
+						<button>
+							blue button
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonial -->
+		<section class="testimonial">
+			<div class="container">
+				<h5>
+					small title
+				</h5>
+				<h3>
+					section title
+				</h3>
+				<h6>
+					subtitle
+				</h6>
+				<div class="cards-container">
+					<div class="card">
+						<img src="" alt="card img">
+						<div>
+							vote
+						</div>
+						<p>
+							text
+						</p>
+						<h6>
+							testimonial name
+						</h6>
+						<p>
+							text
+						</p>
+					</div>
+				</div>
+				<div class="sponsors flex">
+					<div class="card w-1/5">
+						<img src="" alt="sponsor">
+					</div>
+					<div class="card w-1/5">
+						<img src="" alt="sponsor">
+					</div>
+					<div class="card w-1/5">
+						<img src="" alt="sponsor">
+					</div>
+					<div class="card w-1/5">
+						<img src="" alt="sponsor">
+					</div>
+					<div class="card w-1/5">
+						<img src="" alt="sponsor">
+					</div>
+				</div>
+
+			</div>
+		</section>
 	</main>
   
 </template>
@@ -142,12 +404,31 @@ export default {
 
 .price-list{
 	text-align: center;
+	background: rgb(4,55,144);
+	background: linear-gradient(180deg, rgba(4,55,144,1) 60%, rgba(255,255,255,1) 60%);
+
 	.cards-container{
 		display: flex;
 
 		.card{
 			width: 33%;
 		}
+	}
+}
+
+.blog{
+	text-align: center;
+	.cards-container{
+		display: flex;
+
+	}
+}
+
+.testimonial{
+	text-align: center;
+	.cards-container{
+		display: flex;
+
 	}
 }
 
