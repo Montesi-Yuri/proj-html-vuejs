@@ -55,22 +55,33 @@ export default {
 		<!-- Start Your Business -->
 		<section class="start-your-business">
 			<div class="container">
-
-				<div class="w-3/5">
-					<img src="" alt="desk img">
-				</div>
-
-				<div class="w-2/5">
-					<h2>
-						Text
-					</h2>
-					<p>
-						small text
-					</p>
-
-					<button> purple button</button>
-
-					<button> blue button</button>
+				<div class="flex">
+					<div class="w-1/3 relative">
+						<div>
+							<img :src="getImgPath('../assets/img/nemoodar.png')" alt="" class="m-0">
+						</div>
+						<div class="absolute top-20 left-20">
+							<img :src="getImgPath('../assets/img/men-data.png')" alt="start your business">
+						</div>
+					</div>
+					<div class="w-1/2 ps-48">
+						<h5>
+							Start Your Project
+						</h5>
+						<h2 class="text-6xl font-bold mt-8">
+							Grow Your Business
+							<span class="text-6xl font-normal">With Our Strategy</span> 
+						</h2>
+						<p class="my-10">
+							When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.
+						</p>
+						<button class="btn primary-btn me-5">
+							Try It Now 
+						</button>
+						<button class="btn blue-btn">
+							Explore More
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -430,7 +441,13 @@ main{
 
 .start-your-business{
 	display: flex;
-	background-color: rgb(59 130 246);
+	@include bg-secondary;
+	color: white;
+	padding: 110px 0;
+
+	p{
+		color: $secondary-color;
+	}
 }
 
 .price-list{

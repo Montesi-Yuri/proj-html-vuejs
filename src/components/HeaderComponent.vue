@@ -59,7 +59,7 @@ export default {
 					<p class="my-10">
 						When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.
 					</p>
-					<button class="btn primary-btn  me-5">
+					<button class="btn primary-btn me-5">
 						Try It Now 
 					</button>
 					<button class="btn blue-btn">
