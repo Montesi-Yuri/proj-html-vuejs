@@ -358,6 +358,36 @@ export default {
 							text
 						</p>
 					</div>
+					<div class="card">
+						<img src="" alt="card img">
+						<div>
+							vote
+						</div>
+						<p>
+							text
+						</p>
+						<h6>
+							testimonial name
+						</h6>
+						<p>
+							text
+						</p>
+					</div>
+					<div class="card">
+						<img src="" alt="card img">
+						<div>
+							vote
+						</div>
+						<p>
+							text
+						</p>
+						<h6>
+							testimonial name
+						</h6>
+						<p>
+							text
+						</p>
+					</div>
 				</div>
 				<div class="sponsors flex">
 					<div class="card w-1/5">

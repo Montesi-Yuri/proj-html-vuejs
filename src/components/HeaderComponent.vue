@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-	<header class="bg-blue-500">
+	<header id="header" class="bg-blue-500">
 		<div class="container">
 			<section class="header-top">
 				<div class="shrink">
