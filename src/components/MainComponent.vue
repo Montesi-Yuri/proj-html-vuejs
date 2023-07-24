@@ -1,12 +1,19 @@
 <script>
+import {store} from '../store.js'
 
 export default {
-  data() {
-    return {
-    }
-  },
-  components:{
-  }
+	data() {
+		return {
+			store
+		}
+	},
+	components:{
+	},
+	methods:{
+		getImgPath(src){
+			return new URL(`${src}`, import.meta.url).href 
+		},
+	}
 }
 
 </script>
@@ -17,54 +24,30 @@ export default {
 		<section class="our-services">
 			<div class="container">
 				<h5>
-					small title
+					Our services
 				</h5>
-				<h3>
-					section title
+				<h3 class="text-5xl font-bold py-5">
+					What <span class="text-5xl font-normal">we do</span>
 				</h3>
-				<h6>
-					subtitle
+				<h6 class="mb-20">
+					When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.
 				</h6>
 				<div class="cards-container">
-					<div class="card">
-						<img src="" alt="card image">
-						<h4>
-							card title
+					<div class="card" v-for="card in store.main.ourServices.cards">
+						<div>
+							<img :src="getImgPath(card.image)" :alt="card.title">
+						</div>
+						
+						<h4 class="font-bold text-xl mb-5">
+							{{ card.title }}
 						</h4>
 						<p>
-							card text
-						</p>
-					</div>
-					<div class="card">
-						<img src="" alt="card image">
-						<h4>
-							card title
-						</h4>
-						<p>
-							card text
-						</p>
-					</div>
-					<div class="card">
-						<img src="" alt="card image">
-						<h4>
-							card title
-						</h4>
-						<p>
-							card text
-						</p>
-					</div>
-					<div class="card">
-						<img src="" alt="card image">
-						<h4>
-							card title
-						</h4>
-						<p>
-							card text
+							{{ card.text }}
 						</p>
 					</div>
 				</div>
-				<button>
-					purple button
+				<button class="btn primary-btn text-white mt-40">
+					View All Services
 				</button>
 			</div>
 		</section>
@@ -415,14 +398,32 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/main.scss';
+@use '../assets/scss/SingleStylingFiles/variables&mixins.scss' as *;
+
+main{
+	margin: 50px 0;
+}
 
 .our-services{
 	text-align: center;
+	padding-bottom: 40px;
+
+	h5{
+		color: $primary-color;
+	}
 	.cards-container{
 		display: flex;
 
 		.card{
-			width: 25%;
+			width: 20%;
+			padding: 0 20px;
+			height: 100%;
+
+			> div{
+				width: 120px;
+				height: 120px;
+				margin: 30px auto;
+			}
 		}
 	}
 }

@@ -50,7 +50,7 @@ export default {
 			</section>
 			<!-- Hero Section -->
 			<section class="hero-section">
-				<div class="w-2/5 pt-40">
+				<div class="w-2/5 pt-40 me-20">
 					<h2 class="text-6xl font-bold">
 						Business Planning
 						<span class="text-6xl font-normal">Digital Technology</span> 
@@ -77,21 +77,21 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/main.scss';
-@use '../assets/scss/SingleStylingFiles/variables' as *;
+@use '../assets/scss/SingleStylingFiles/variables&mixins' as *;
 
 header{
 	background: rgb(10,24,82);
 	background: linear-gradient(180deg, rgba(10,24,82,1) 14%, rgba(3,5,53,1) 40%);
 	color: white;
 	padding-top: 10px;
-	padding-bottom: 60px;
+	padding-bottom: 80px;
 }
 .header-top{
 	display: flex;
 	padding: 20px 0;
 
 	.active{
-		color: salmon;
+		color: $primary-color;
 	}
 }
 .hero-section{
@@ -104,5 +104,4 @@ header{
 		width: 100%;
 	}
 }
-
 </style>
