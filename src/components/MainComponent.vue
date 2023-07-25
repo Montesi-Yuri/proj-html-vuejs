@@ -34,19 +34,28 @@ export default {
 				</h6>
 				<div class="cards-container">
 					<div class="card" v-for="card in store.main.ourServices.cards">
-						<div>
+						<div class="card-image">
 							<img :src="getImgPath(card.image)" :alt="card.title">
 						</div>
+						<div class="card-text">
+							<h4 class="font-bold text-xl mb-5">
+								{{ card.title }}
+							</h4>
+							<p>
+								{{ card.text }}
+							</p>
+						</div>
+						<div class="arrow-link">
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+								</svg>
+							</a>
+						</div>
 						
-						<h4 class="font-bold text-xl mb-5">
-							{{ card.title }}
-						</h4>
-						<p>
-							{{ card.text }}
-						</p>
 					</div>
 				</div>
-				<button class="btn primary-btn text-white mt-40">
+				<button class="btn primary-btn text-white mt-20">
 					View All Services
 				</button>
 			</div>
@@ -90,177 +99,95 @@ export default {
 		<section class="portfolio">
 			<div class="container">
 				<h5>
-					small title
+					Portfolio
 				</h5>
-				<h3>
-					Title
+				<h3 class=" text-4xl font-bold">
+					latest <span class="font-normal"> work</span>
 				</h3>
-				<div class="carousel">
-					<button>
-						prev
-					</button>
-					<button>
-						next
-					</button>
-					<img src="" alt="active img">
-					<div class="text-center">
-						active img counter
+			</div>
+			<div class="carousel">
+				<button>
+					prev
+				</button>
+				<button>
+					next
+				</button>
+
+				<div class="cards-container">
+					<div class="card" v-for="card in store.main.portfolio">
+						<div class="card-image">
+							<img :src="getImgPath(card.image)" :alt="card.title">
+						</div>
+						<div class="card-text">
+							<h6 class="font-bold">
+								{{ card.title }}							
+							</h6>
+							<p class="font-extralight">
+								{{ card.subtitle }}
+							</p>
+						</div>
 					</div>
 				</div>
+				
+				
+				<div class="text-center">
+					active img counter
+				</div>
 			</div>
+			
 		</section>
 
 		<!-- Price List -->
 		<section class="price-list">
 			<div class="container">
 				<h5>
-					small title
+					Price List
 				</h5>
 				<h3>
-					section title
+					Our <span class="font-normal"> Pricing</span>
 				</h3>
-				<h6>
-					subtitle
-				</h6>
+				<p class="text-white my-3">
+					When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.
+				</p>
 				<div class="cards-container">
-					<div class="card">
-						<h4>
-							card title
+					<div class="card" v-for="card in store.main.priceList.cards" :class=" card.colorSet == 'light' ? 'light' : '',  card.colorSet == 'primary' ? 'primary' : '' ">
+
+						<span class="bg-price" :class=" card.colorSet == 'light' ? 'light' : '',  card.colorSet == 'primary' ? 'primary' : '' ">
+							{{ card.price }}
+						</span>
+						<h4 class="font-bold text-4xl">
+							{{ card.title }}
 						</h4>
-						<h5>
-							card subtitle
-						</h5>
-						<div class="price">
-							<p>$</p>
-							<span class=" text-4xl">
-								40
+						<h6>
+							{{ card.subtitle }}
+						</h6>
+						<div class="price my-10">
+							<p class="text-center pe-20">$</p>
+							<span class=" text-8xl font-bold">
+								{{ card.price }}
 							</span>
 							<p>
-								Per Month
+								{{ card.cadence }}
 							</p>
 						</div>
-						<p>text 
-							<span>
-								span text
+
+						<p v-for="service in card.services" class="font-bold py-2">
+
+							{{ service.bold }} 
+							<span class="font-normal">
+								{{ service.thin }}
 							</span>
 						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<button>
-							purple button
+
+						<button class="btn my-5 font-bold" :class=" card.colorSet == 'light' ? 'primary-btn' : '', card.colorSet == 'primary' ? 'light-btn' : '' ">
+							<span :class=" card.colorSet == 'primary' ? ' text-rose-500' : '' ">Order Now </span> 
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ms-8" :class=" card.colorSet == 'primary' ? ' text-rose-500' : '' ">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+							</svg>
+
 						</button>
 					</div>
 
-					<div class="card">
-						<h4>
-							card title
-						</h4>
-						<h5>
-							card subtitle
-						</h5>
-						<div class="price">
-							<p>$</p>
-							<span class=" text-4xl">
-								40
-							</span>
-							<p>
-								Per Month
-							</p>
-						</div>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<button>
-							purple button
-						</button>
-					</div>
-
-					<div class="card">
-						<h4>
-							card title
-						</h4>
-						<h5>
-							card subtitle
-						</h5>
-						<div class="price">
-							<p>$</p>
-							<span class=" text-4xl">
-								40
-							</span>
-							<p>
-								Per Month
-							</p>
-						</div>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<p>text 
-							<span>
-								span text
-							</span>
-						</p>
-						<button>
-							purple button
-						</button>
-					</div>
-					
 				</div>
 			</div>
 		</section>
@@ -424,16 +351,53 @@ main{
 	}
 	.cards-container{
 		display: flex;
+		margin-top: 160px;
 
 		.card{
-			width: 20%;
-			padding: 0 20px;
+			width: 300px;
 			height: 100%;
+			position: relative;
 
-			> div{
-				width: 120px;
-				height: 120px;
-				margin: 30px auto;
+			&:hover .card-image{
+				box-shadow: -2px -2px 10px rgb(75, 74, 74);
+			}
+			&:hover .card-text{
+				@include bg-secondary;
+				color: white;
+				box-shadow: -2px -2px 10px rgb(75, 74, 74);
+			}
+			&:hover .arrow-link{
+				display: flex;
+			}
+
+			.card-image{
+				width: 150px;
+				height: 150px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: translate(50%, -50%);
+				background-color: white;
+				padding: 15px;
+				border-radius: 15px;
+			}
+			.card-text{
+				padding: 40px;
+				padding-top: 120px;
+				border-radius: 24px;
+			}
+			.arrow-link{
+				width: 50px;
+				height: 50px;
+				@include bg-primary;
+				border-radius: 50%;
+				display: none;
+				align-items: center;
+				position: relative;
+				top: 0;
+				left: 0;
+				transform: translate( 0, -50%);
+				cursor: pointer;
 			}
 		}
 	}
@@ -449,18 +413,90 @@ main{
 		color: $secondary-color;
 	}
 }
-
-.price-list{
-	text-align: center;
-	background: rgb(4,55,144);
-	background: linear-gradient(180deg, rgba(4,55,144,1) 60%, rgba(255,255,255,1) 60%);
+.portfolio{
 
 	.cards-container{
+		margin: 0;
 		display: flex;
+	}
+	.card{
+		width: 400px;
+		box-shadow: 2px 2px 5px grey;
+		border-radius: 25px;
+		overflow: hidden;
+		margin: 15px 30px;
 
-		.card{
-			width: 33%;
+		.card-image{
+			border-radius: 25px;
+			overflow: hidden;
 		}
+		.card-text{
+			display: flex;
+			justify-content: space-between;
+			padding: 25px 15px;
+		}
+
+	}
+	h5{
+		color: $primary-color;
+	}
+}
+.price-list{
+	text-align: center;
+	@include bg-half-secondary;
+	padding: 80px 0;
+
+	h5{
+		font-weight: 500;
+		margin: 10px 0;
+		color: $primary-color;
+	}
+	h3{
+		color: white;
+		font-size: 36px;
+		font-weight: bold;
+	}
+	.cards-container{
+		display: flex;
+		margin-top: 70px;
+		.card{
+			width: 30%;
+			border-radius: 25px;
+			padding: 30px;
+			position: relative;
+			box-shadow: -1px -1px 4px slategray;
+
+			h6{
+				font-size: small;
+				font-weight: bold;
+				margin: 10px 0;
+			}
+			.bg-price{
+				position: absolute;
+				top: 0;
+				right: -5px;
+				line-height: 200px;
+				font-size: 260px;
+				padding: 0;
+				margin: 0;
+				&.light{
+					color: rgba($color: black, $alpha: 0.2);
+				}
+				&.primary{
+					color: rgba($color: white, $alpha: 0.2);
+				}
+			}
+			&.light{
+				color: black;
+				background-color: white;
+			}
+			&.primary{
+				color: white;
+				@include bg-primary;
+			}
+		}
+		
+		
 	}
 }
 

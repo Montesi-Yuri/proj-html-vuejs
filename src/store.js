@@ -67,13 +67,13 @@ export const store = reactive({
                 subtitle: 'Branding Strategy'
             },
             {
-                image:'../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
-                title: 'Satisfy Poster',
-                subtitle: 'Branding Strategy'
+                image:'../assets/img/84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg',
+                title: 'Modern Library',
+                subtitle: 'Digital Experience'
             },
             {
-                image:'../assets/img/a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg',
-                title: 'Satisfy Poster',
+                image:'../assets/img/8wa60okr-1-790x576.jpg',
+                title: 'Basket of Flower on table',
                 subtitle: 'Branding Strategy'
             },
             {
@@ -82,6 +82,97 @@ export const store = reactive({
                 subtitle: 'Branding Strategy'
             },
 
-        ]
+        ],
+        priceList:{
+            cards:[
+                {
+                    title:'Designing',
+                    subtitle: 'PROCESS',
+                    price: '40',
+                    cadence: 'Per Month',
+                    services:[
+                        {
+                            bold: 'Creative',
+                            thin:  'Design Enabled'
+                        },
+                        {
+                            bold: 'Vibrant',
+                            thin:  'Color Usage'
+                        },
+                        {
+                            bold: 'Eye',
+                            thin:  'Catching Design'
+                        },
+                        {
+                            bold: 'Extreme',
+                            thin:  'Typography'
+                        },
+                        {
+                            bold: 'Exceptional',
+                            thin:  'Design'
+                        }
+                    ],
+                    colorSet: 'light',
+                },
+                {
+                    title:'Developing',
+                    subtitle: 'PRODUCT',
+                    price: '60',
+                    cadence: 'Per Month',
+                    services:[
+                        {
+                            bold: 'Creative',
+                            thin:  'Design Enabled'
+                        },
+                        {
+                            bold: 'Vibrant',
+                            thin:  'Color Usage'
+                        },
+                        {
+                            bold: 'Eye',
+                            thin:  'Catching Design'
+                        },
+                        {
+                            bold: 'Extreme',
+                            thin:  'Typography'
+                        },
+                        {
+                            bold: 'Exceptional',
+                            thin:  'Design'
+                        }
+                    ],
+                    colorSet: 'primary',
+                },
+                {
+                    title:'Supporting',
+                    subtitle: 'CLIENTS',
+                    price: '80',
+                    cadence: 'Per Month',
+                    services:[
+                        {
+                            bold: 'Creative',
+                            thin:  'Design Enabled'
+                        },
+                        {
+                            bold: 'Vibrant',
+                            thin:  'Color Usage'
+                        },
+                        {
+                            bold: 'Eye',
+                            thin:  'Catching Design'
+                        },
+                        {
+                            bold: 'Extreme',
+                            thin:  'Typography'
+                        },
+                        {
+                            bold: 'Exceptional',
+                            thin:  'Design'
+                        }
+                    ],
+                    colorSet: 'light',
+                }
+            ]
+        }
     }
 });
