@@ -6,6 +6,8 @@ $primary-color: #F9636B;
 
 $secondary-color: #527CEB;
 
+$tertiary-color: #B6246E;
+
 @mixin bg-primary{
     background: rgb(249,99,107);
     background: linear-gradient(328deg, rgba(249,99,107,1) 34%, rgba(182,36,110,1) 50%);

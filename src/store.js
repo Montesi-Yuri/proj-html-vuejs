@@ -201,6 +201,48 @@ export const store = reactive({
                     cardWidth: 'w-1/4'   
                 }
             ]
+        },
+        testimonials:{
+            cards:[
+                {
+                    image:'../assets/img/szabo-viktor-1266895-unsplash-1024x1024.png',
+                    vote: 3,
+                    review: 'When, while lovely valley teems with vapor around meand the meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand.',
+                    name: 'Michkel Anegl',
+                    role: 'Marketing Management'
+                },
+                {
+                    image:'../assets/img/philipe-cavalcante-539505-unsplash-1024x1024.png',
+                    vote: 3,
+                    review: 'When, while lovely valley teems with vapor around meand the meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand.',
+                    name: 'Michkel Anegl',
+                    role: 'Marketing Management'
+                },
+                {
+                    image:'../assets/img/fabio-spinelli-695744-unsplash-1024x1024.png',
+                    vote: 3,
+                    review: 'When, while lovely valley teems with vapor around meand the meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand.',
+                    name: 'Michkel Anegl',
+                    role: 'Marketing Management'
+                },
+            ],
+            sponsors:[
+                {
+                    image:'../assets/img/client-1.png'
+                },
+                {
+                    image:'../assets/img/client-2.png'
+                },
+                {
+                    image:'../assets/img/client-3.png'
+                },
+                {
+                    image:'../assets/img/client-4.png'
+                },
+                {
+                    image:'../assets/img/client-5.png'
+                },
+            ]
         }
     }
 });
