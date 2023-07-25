@@ -288,7 +288,6 @@ export default {
 main{
 	margin: 50px 0;
 }
-
 .our-services{
 	text-align: center;
 	padding-bottom: 40px;
@@ -349,7 +348,6 @@ main{
 		}
 	}
 }
-
 .start-your-business{
 	display: flex;
 	@include bg-secondary;
@@ -442,7 +440,6 @@ main{
 		
 	}
 }
-
 .blog{
 	text-align: center;
 	.cards-container{
@@ -494,7 +491,6 @@ main{
 		}
 	}
 }
-
 .testimonial{
 	text-align: center;
 	.cards-container{
