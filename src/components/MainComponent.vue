@@ -171,7 +171,7 @@ export default {
 							</p>
 						</div>
 
-						<p v-for="service in card.services" class="font-bold py-2">
+						<p v-for="service in card.services" class="py-2">
 
 							{{ service.bold }} 
 							<span class="font-normal">
@@ -196,56 +196,36 @@ export default {
 		<section class="blog">
 			<div class="container">
 				<h5>
-					small title
+					Blog
 				</h5>
 				<h3>
-					section title
+					Latest <span class="font-normal"> Posts</span>
 				</h3>
-				<h6>
-					subtitle
+				<h6 class="mt-5">
+					When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.
 				</h6>
 				<div class="cards-container">
-					<div class="card w-1/3">
-						<span>
-							text
-						</span>
-						<h5>
-							card title
-						</h5>
-						<p>
-							card text
-						</p>
-						<button>
-							blue button
-						</button>
-					</div>
-					<div class="card w-1/6">
-						<span>
-							text
-						</span>
-						<h5>
-							card title
-						</h5>
-						<p>
-							card text
-						</p>
-						<button>
-							blue button
-						</button>
-					</div>
-					<div class="card w-1/6">
-						<span>
-							text
-						</span>
-						<h5>
-							card title
-						</h5>
-						<p>
-							card text
-						</p>
-						<button>
-							blue button
-						</button>
+					<div class="card" v-for="card in store.main.blog.cards" :class="card.cardWidth, card.cardWidth == 'w-1/2' ? 'big-card' : '' ">
+						<div class="card-text">
+							<span>
+								{{ card.date }}
+							</span>
+							<span>
+								&#8226 {{ card.author }}
+							</span>
+							<h5>
+								{{card.title}}
+							</h5>
+							<p>
+								{{card.text}}
+							</p>
+						</div>
+						<div>
+							<button class="btn light-btn">
+								Read More
+							</button>
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -412,6 +392,9 @@ main{
 	p{
 		color: $secondary-color;
 	}
+	h5{
+		color: white;
+	}
 }
 .portfolio{
 
@@ -446,15 +429,8 @@ main{
 	@include bg-half-secondary;
 	padding: 80px 0;
 
-	h5{
-		font-weight: 500;
-		margin: 10px 0;
-		color: $primary-color;
-	}
 	h3{
 		color: white;
-		font-size: 36px;
-		font-weight: bold;
 	}
 	.cards-container{
 		display: flex;
@@ -504,7 +480,51 @@ main{
 	text-align: center;
 	.cards-container{
 		display: flex;
+		margin: 50px 0;
+		.card{
+			border-radius: 25px;
+			box-shadow: -1px -1px 4px slategray;
+			margin: 20px;
+			padding: 30px;
+			text-align: left;
+			@include bg-secondary;
+			color: white;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: end;
+			font-size: small;
+			filter: brightness(0.9);
 
+			h5{
+				margin: 20px 0;
+				font-weight: bold;
+				color: white;
+				font-size: 18px;
+			}
+			p{
+				margin-bottom: 40px;
+			}
+
+			&.big-card{
+				align-items: end;
+				background-image: url('../assets/img/headway-537308-unsplash-1380x703.jpg');
+				background-size: contain;
+
+				> div:first-child{
+					width: 60%;
+					margin-left: 0;
+					flex-grow: 1;
+
+					p{
+						margin: 0;
+					}
+				}
+				> div{
+					
+				}
+
+			}
+		}
 	}
 }
 

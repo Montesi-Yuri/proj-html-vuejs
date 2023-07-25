@@ -173,6 +173,34 @@ export const store = reactive({
                     colorSet: 'light',
                 }
             ]
+        },
+        blog:{
+            cards:[
+                {
+                    bgImage: '../assets/img/headway-537308-unsplash-1380x703.jpg',
+                    date: 'April 21, 2019',
+                    author: 'by Paul',
+                    title: 'Amazon gets CCI nod to acquire 49% stake in',
+                    text: 'When, while lovely valley teems with vapor around meand the meridian sun s ...',
+                    cardWidth: 'w-1/2'
+                },
+                {
+                    bgImage: '',
+                    date: 'April 21, 2019',
+                    author: 'by Paul',
+                    title: 'Clearing corporations get SEBI nod to invest in overnight funds',
+                    text: 'When, while lovely valley teems with vapor around meand the meridian sun s ...',
+                    cardWidth: 'w-1/4'   
+                },
+                {
+                    bgImage: '',
+                    date: 'April 21, 2019',
+                    author: 'by Paul',
+                    title: 'Shabnam Dhillion, wife of RSSB chief Gurinder Dhillion, passes away in London',
+                    text: 'When, while lovely valley teems with vapor around meand the meridian sun s ...',
+                    cardWidth: 'w-1/4'   
+                }
+            ]
         }
     }
 });
