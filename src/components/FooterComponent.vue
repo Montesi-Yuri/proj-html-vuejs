@@ -36,104 +36,120 @@ export default {
 			<section class="footer-info">
 				<div class="cards-container">
 					<div class="card">
-						<img src="" alt="logo">
+						<div class="mb-10">
+							<img class="ms-0" src="../assets/img/white-logo-2.png" alt="logo">
+						</div>
 						<p>
-							text
+							When, while lovely valley teems with vapor around meand the meridian sun strikes the upper impenetrable.
 						</p>
 					</div>
 					<div class="card">
 						<h6>
-							title
+							Quick Links
 						</h6>
 						<ul>
 							<li>
-								<a href="">social icon
-									link
+								<a href="">
+									Services
 								</a>
 							</li>
 							<li>
 								<a href="">
-									link
+									Contact
 								</a>
 							</li>
 							<li>
 								<a href="">
-									link
+									Blog
 								</a>
 							</li>
 						</ul>
 					</div>
 					<div class="card">
 						<h6>
-							title
+							Resources
 						</h6>
 						<ul>
 							<li>
 								<a href="">
-									link
+									Art Design
 								</a>
 							</li>
 							<li>
 								<a href="">
-									link
+									Computer
 								</a>
 							</li>
 							<li>
 								<a href="">
-									link
+									IT News
 								</a>
 							</li>
 							<li>
 								<a href="">
-									link
+									Networking
 								</a>
 							</li>
 							<li>
 								<a href="">
-									link
+									Web Security
 								</a>
 							</li>
 						</ul>
 					</div>
 					<div class="card">
 						<h6>
-							title
+							Contact Us
 						</h6>
-						<p>
+						<p class="mb-8">
 							<span>
-								highlighted text
+								Address :
 							</span>
-							text
+							Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, Tx 76051
 						</p>
 						<p>
 							<span>
-								highlighted text
+								Phone :
 							</span>
-							text
+							+99 (0) 101 0000 888
 						</p>
 						<p>
 							<span>
-								highlighted text
+								Email :
 							</span>
-							text
+							info@yourdomain.com
 						</p>
 					</div>
 				</div>
 			</section>
-			<hr>
+		</div>
+		<hr>
+		<div class="container">
 			<section class="footer-bottom">
-				<div>
-					<p>copyrights</p>
+				<div class="w-1/2">
+					<p>© 2020 Phlox. All Rights Reserved.</p>
 				</div>
-				<div>
-					<a href="">social icon</a>
-					<a href="">social icon</a>
-					<a href="">social icon</a>
-					<a href="">social icon</a>
+				<div class="social-icons">
+					<a href="">
+						<font-awesome-icon icon="fa-brands fa-instagram" />
+					</a>
+					<a href="">
+						<font-awesome-icon icon="fa-brands fa-linkedin" />
+					</a>
+					<a href="">
+						<font-awesome-icon icon="fa-brands fa-facebook" />
+					</a>
+					<a href="">
+						<font-awesome-icon icon="fa-brands fa-twitter" />
+					</a>
 				</div>
-				<a href="#header">
-					Back to the top
-				</a>
+				<div class="back-top">
+					<a href="#header">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+						</svg>
+					</a>
+				</div>
 			</section>
 		</div>
 	</footer>
@@ -146,22 +162,93 @@ export default {
 @use '../assets/scss/main.scss';
 @use '../assets/scss/SingleStylingFiles/variables&mixins.scss' as *;
 
-.floating-section{
-	@include bg-primary;
-	display: flex;
-}
+footer{
+	@include bg-secondary;
+	position: relative;
+	margin-top: 220px;
 
-.footer-info{
-	.cards-container{
+	hr{
+		color: #BBBBBB
+	}
+
+	.floating-section{
+		@include bg-primary;
 		display: flex;
+		position: relative;
+		top: 0; left: 0;
+		transform: translate(0, -50%);
+	}
 
-		.card{
-			width: 25%;
+	.footer-info{
+		color: white;
+		padding-bottom: 60px;
+		
+		.cards-container{
+			display: flex;
+
+			.card{
+				width: 25%;
+				padding: 10px 40px;
+				
+				li{
+					margin: 10px 0;
+					a{
+						color: #BBBBBB;
+						font-weight: 200;
+						font-size: small;	
+					}
+				}
+
+				h6{
+					font-size: larger;
+					font-weight: bold;
+					margin-bottom: 15px;
+				}
+				span{
+					font-weight: bold;
+					color: white;
+				}
+				p{
+					font-size: small;
+					color: #BBBBBB;
+					font-weight: 200;
+				}
+			}
+		}
+	}
+
+	.footer-bottom{
+		display: flex;
+		color: #BBBBBB;
+		position: relative;
+		padding: 30px 0;
+		font-size: small;
+
+		.social-icons{
+			width: 50%;
+			display: flex;
+			justify-content: end;
+			margin-right: 100px;
+			a{
+				color: white;
+				margin: 0 20px;
+			}
+		}
+		.back-top{
+			width: 40px;
+			height: 40px;
+			background-color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0; right: 0;
+			transform: translate(-50%, -50%);
+
+
 		}
 	}
 }
 
-.footer-bottom{
-	display: flex;
-}
 </style>

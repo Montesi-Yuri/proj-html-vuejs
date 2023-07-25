@@ -12,7 +12,8 @@ export default {
   components:{
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    
   }
 }
 
