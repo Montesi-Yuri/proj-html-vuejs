@@ -17,6 +17,8 @@ import { faInstagram} from '@fortawesome/free-brands-svg-icons';
 /* add icons to the library */
 library.add(faUserSecret, faTwitter, faLinkedin, faFacebook, faInstagram)
 
+/////////////////////////////////////////////////
+
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
 .mount('#app')

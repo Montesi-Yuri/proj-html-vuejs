@@ -1,19 +1,30 @@
 <script>
-import {store} from '../store.js'
+import {store} from '../store.js';
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/bundle';
+
 
 export default {
 	data() {
 		return {
-			store
+			store,
+			modules: [Pagination, Navigation],
+			
 		}
 	},
 	components:{
+		Swiper,
+		SwiperSlide
 	},
 	methods:{
 		getImgPath(src){
 			return new URL(`${src}`, import.meta.url).href 
 		},
-	}
+	},
 }
 
 </script>
@@ -105,16 +116,16 @@ export default {
 					latest <span class="font-normal"> work</span>
 				</h3>
 			</div>
-			<div class="carousel">
-				<button>
-					prev
-				</button>
-				<button>
-					next
-				</button>
-
-				<div class="cards-container">
-					<div class="card" v-for="card in store.main.portfolio">
+			
+			<swiper
+			:navigation="true"
+			:pagination="true" 
+			:modules="modules" 
+			:slides-per-view="3"
+			class="mt-16"
+			>
+				<swiper-slide class="flex justify-center" v-for="card in store.main.portfolio">
+					<div class="card">
 						<div class="card-image">
 							<img :src="getImgPath(card.image)" :alt="card.title">
 						</div>
@@ -127,13 +138,8 @@ export default {
 							</p>
 						</div>
 					</div>
-				</div>
-				
-				
-				<div class="text-center">
-					active img counter
-				</div>
-			</div>
+				</swiper-slide>
+			</swiper>
 			
 		</section>
 
@@ -362,6 +368,7 @@ main{
 	}
 }
 .portfolio{
+	padding: 140px 0;
 
 	.cards-container{
 		margin: 0;
@@ -455,7 +462,7 @@ main{
 			color: white;
 			display: flex;
 			flex-wrap: wrap;
-			align-items: end;
+			align-items: flex-end;
 			font-size: small;
 			filter: brightness(0.9);
 
@@ -478,14 +485,11 @@ main{
 					width: 60%;
 					margin-left: 0;
 					flex-grow: 1;
-
 					p{
 						margin: 0;
 					}
 				}
-				> div{
-					
-				}
+				
 
 			}
 		}
