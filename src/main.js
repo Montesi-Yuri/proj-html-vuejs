@@ -10,12 +10,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram} from '@fortawesome/free-brands-svg-icons';
 
 /* add icons to the library */
-library.add(faUserSecret, faTwitter, faLinkedin, faFacebook, faInstagram)
+library.add(faUserSecret, faTwitter, faLinkedinIn, faFacebookF, faInstagram)
 
 /////////////////////////////////////////////////
 

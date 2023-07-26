@@ -234,13 +234,13 @@ export const store = reactive({
                     image:'../assets/img/client-2.png'
                 },
                 {
-                    image:'../assets/img/client-3.png'
-                },
-                {
                     image:'../assets/img/client-4.png'
                 },
                 {
                     image:'../assets/img/client-5.png'
+                },
+                {
+                    image:'../assets/img/client-3.png'
                 },
             ]
         }

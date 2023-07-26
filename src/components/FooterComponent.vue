@@ -5,8 +5,6 @@ export default {
     return {
     }
   },
-  components:{
-  }
 }
 
 </script>
@@ -25,8 +23,8 @@ export default {
 				</div>
 				<div class="w-1/2 flex items-center">
 					<div class="bg-white rounded-full py-2 ps-4 px-2 w-3/4 flex justify-between ms-40">
-						<input type="text" placeholder="Enter Your Email Address" class="grow text-black">
-						<button class="btn primary-btn text-sm ms-5">
+						<input type="text" placeholder="Enter Your Email Address" class="ps-5 text-sm grow text-black">
+						<button class="btn blue-btn text-sm ms-5">
 							Subscribe
 						</button>
 					</div>
@@ -134,10 +132,10 @@ export default {
 						<font-awesome-icon icon="fa-brands fa-instagram" />
 					</a>
 					<a href="">
-						<font-awesome-icon icon="fa-brands fa-linkedin" />
+						<font-awesome-icon icon="fa-brands fa-linkedin-in" />
 					</a>
 					<a href="">
-						<font-awesome-icon icon="fa-brands fa-facebook" />
+						<font-awesome-icon icon="fa-brands fa-facebook-f" />
 					</a>
 					<a href="">
 						<font-awesome-icon icon="fa-brands fa-twitter" />
@@ -168,9 +166,8 @@ footer{
 	margin-top: 220px;
 
 	hr{
-		color: #BBBBBB
+		border-color: #333333;
 	}
-
 	.floating-section{
 		@include bg-primary;
 		display: flex;
@@ -227,7 +224,7 @@ footer{
 		.social-icons{
 			width: 50%;
 			display: flex;
-			justify-content: end;
+			justify-content: flex-end;
 			margin-right: 100px;
 			a{
 				color: white;

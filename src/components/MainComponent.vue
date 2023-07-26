@@ -1,19 +1,15 @@
 <script>
 import {store} from '../store.js';
-
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/bundle';
-
 
 export default {
 	data() {
 		return {
 			store,
 			modules: [Pagination, Navigation],
-			
 		}
 	},
 	components:{
@@ -88,9 +84,9 @@ export default {
 						<h5>
 							Start Your Project
 						</h5>
-						<h2 class="text-6xl font-bold mt-8">
+						<h2 class="text-5xl font-bold mt-8 leading-tight">
 							Grow Your Business
-							<span class="text-6xl font-normal">With Our Strategy</span> 
+							<span class="font-normal">With Our Strategy</span> 
 						</h2>
 						<p class="my-10">
 							When, while lovely valley teems with vapor around meand the meridian sun strikes the upper surface.
@@ -115,32 +111,31 @@ export default {
 				<h3 class=" text-4xl font-bold">
 					latest <span class="font-normal"> work</span>
 				</h3>
+			
+				<swiper
+				:navigation="true"
+				:pagination="true" 
+				:modules="modules" 
+				:slides-per-view="3"
+				class="mt-16"
+				>
+					<swiper-slide class="flex justify-center" v-for="card in store.main.portfolio">
+						<div class="card">
+							<div class="card-image">
+								<img :src="getImgPath(card.image)" :alt="card.title">
+							</div>
+							<div class="card-text">
+								<h6 class="font-bold">
+									{{ card.title }}							
+								</h6>
+								<p class="font-extralight">
+									{{ card.subtitle }}
+								</p>
+							</div>
+						</div>
+					</swiper-slide>
+				</swiper>
 			</div>
-			
-			<swiper
-			:navigation="true"
-			:pagination="true" 
-			:modules="modules" 
-			:slides-per-view="3"
-			class="mt-16"
-			>
-				<swiper-slide class="flex justify-center" v-for="card in store.main.portfolio">
-					<div class="card">
-						<div class="card-image">
-							<img :src="getImgPath(card.image)" :alt="card.title">
-						</div>
-						<div class="card-text">
-							<h6 class="font-bold">
-								{{ card.title }}							
-							</h6>
-							<p class="font-extralight">
-								{{ card.subtitle }}
-							</p>
-						</div>
-					</div>
-				</swiper-slide>
-			</swiper>
-			
 		</section>
 
 		<!-- Price List -->
@@ -177,7 +172,7 @@ export default {
 							</p>
 						</div>
 
-						<p v-for="service in card.services" class="py-2">
+						<p v-for="service in card.services" class="py-2 font-bold">
 
 							{{ service.bold }} 
 							<span class="font-normal">
@@ -284,7 +279,6 @@ export default {
 			</div>
 		</section>
 	</main>
-  
 </template>
 
 <style lang="scss" scoped>
@@ -296,7 +290,7 @@ main{
 }
 .our-services{
 	text-align: center;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 
 	h5{
 		color: $primary-color;
@@ -304,6 +298,7 @@ main{
 	.cards-container{
 		display: flex;
 		margin-top: 160px;
+		height: 380px;
 
 		.card{
 			width: 300px;
@@ -358,7 +353,8 @@ main{
 	display: flex;
 	@include bg-secondary;
 	color: white;
-	padding: 110px 0;
+	padding-top: 110px;
+	padding-bottom: 150px;
 
 	p{
 		color: $secondary-color;
@@ -390,7 +386,6 @@ main{
 			justify-content: space-between;
 			padding: 25px 15px;
 		}
-
 	}
 	h5{
 		color: $primary-color;
@@ -421,8 +416,8 @@ main{
 			}
 			.bg-price{
 				position: absolute;
-				top: 0;
-				right: -5px;
+				top: 7px;
+				right: -13px;
 				line-height: 200px;
 				font-size: 260px;
 				padding: 0;
@@ -449,6 +444,7 @@ main{
 }
 .blog{
 	text-align: center;
+	padding: 40px 0;
 	.cards-container{
 		display: flex;
 		margin: 50px 0;

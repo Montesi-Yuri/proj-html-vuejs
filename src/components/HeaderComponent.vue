@@ -51,7 +51,7 @@ export default {
 			<!-- Hero Section -->
 			<section class="hero-section">
 				<div class="w-2/5 pt-40 me-20">
-					<h2 class="text-6xl font-bold">
+					<h2 class="text-6xl font-bold leading-tight">
 						Business Planning
 						<span class="text-6xl font-normal">Digital Technology</span> 
 						Modern solution !
