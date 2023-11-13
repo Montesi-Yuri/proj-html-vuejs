@@ -304,17 +304,21 @@ main{
 			width: 300px;
 			height: 100%;
 			position: relative;
+			transition: ease-in-out 0.2s;
 
 			&:hover .card-image{
 				box-shadow: -2px -2px 10px rgb(75, 74, 74);
+				transition: ease-in-out 0.2s;
 			}
 			&:hover .card-text{
 				@include bg-secondary;
 				color: white;
 				box-shadow: -2px -2px 10px rgb(75, 74, 74);
+				transition: ease-in-out 0.2s;
 			}
 			&:hover .arrow-link{
 				display: flex;
+				transition: ease-in-out 0.2s;
 			}
 
 			.card-image{

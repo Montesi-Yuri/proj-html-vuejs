@@ -23,7 +23,7 @@ export default {
 				</div>
 				<div class="w-1/2 flex items-center">
 					<div class="bg-white rounded-full py-2 ps-4 px-2 w-3/4 flex justify-between ms-40">
-						<input type="text" placeholder="Enter Your Email Address" class="ps-5 text-sm grow text-black">
+						<input type="text" placeholder="Enter Your Email Address" class="ps-5 text-sm grow text-black rounded-full">
 						<button class="btn blue-btn text-sm ms-5">
 							Subscribe
 						</button>
